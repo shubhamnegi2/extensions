@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    />
+    <!-- <link rel="stylesheet" href="index.css" />
+    
+    -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.services {
+  margin-top: 100px;
+}
+.services .topBar .tabBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+.services .topBar .tabBtns img {
+  width: 20px;
+}
+.services .topBar .tabBtns span {
+  margin-left: 8px;
+}
+.services .topBar .activeTabBrn {
+  background-color: #eee;
+}
+.services .topBar .details, .services .topBar input {
+  border-radius: 5px;
+  width: 100%;
+  padding: 4px 0px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  border: 2px solid #eee;
+  color: rgb(24, 23, 23);
+}
+.services .topBar .details option {
+  padding: 0px 5px;
+}
+.services .topBar input {
+  text-align: left;
+  padding-left: 12px;
+}
+.services .allCardWrapper .servicesCardWrapper {
+  display: none;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard h2 {
+  text-align: center;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard ul {
+  margin-top: 5px;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard ul li {
+  font-size: 14px;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard .btnTxt {
+  background-color: #eee;
+  text-align: center;
+  padding: 2px 0px;
+  border-radius: 20px;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard p {
+  text-align: center;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard a {
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid #eee;
+}
+.services .allCardWrapper .servicesCardWrapper .servicesCard .bookNowBtn a {
+  padding: 4px 30px;
+  background-color: #eee;
+  color: #000;
+  border-radius: 5px;
+}
+.services .allCardWrapper .AcCard {
+  display: block;
+}/*# sourceMappingURL=index.css.map */
+    </style>
+  </head>
+  <body>
+    <!-- <section class="servicesWrapper">
+      <div class="container">
+        <div class="topBar">
+          <h1 class="text-center">
+            we provide complete <span class="highlight">AC, Fan </span> and
+            <span class="highlight">microwave</span>services
+          </h1>
+        </div>
+        <div class="services">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="leftSection">
+              <div class="leftInnerSec leftInnerSec1">
+                <img
+                  src="https://www.mannubhai.com/assets/images/ac-service-img.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rightSection">
+              <div class="rightInnerSec rightInnerSec1">
+                <h2>Complete AC repair services</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, possimus quis quas officiis minima veritatis!</p>
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li>Lorem, ipsum Lorem, ipsum dolor..</li>
+                  <li>Lorem, ipsum Lorem ipsum dolor sit amet.
+                  </li>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li>Lorem, ipsum Lorem, ipsum dolor..</li>
+                </ul>
+                <a href="#" type="button" class="seeMoreBtn">See More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section> -->
+    <section class="services">
+      <div class="container">
+        <div class="topBar">
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-4">
+              <div class="tabBtns ac activeTabBrn">
+                <img
+                  src="https://static.thenounproject.com/png/564450-200.png"
+                  alt="ac"
+                />
+                <span>Ac Repair</span>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <div class="tabBtns termite ">
+                <img
+                  src="https://www.iconpacks.net/icons/2/free-air-conditioner-icon-1838-thumb.png"
+                  alt="termite"
+                />
+                <span>Termite Control</span>
+              </div>
+            </div>
+           
+            <div class="col-md-3 col-sm-4">
+              <div class="tabBtns combo">
+                <img
+                  src="https://cdn.w600.comps.canstockphoto.com/combo-black-on-white-sign-image_csp94379774.jpg"
+                  alt="combo"
+                />
+                <span>Combo Offer</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4 justify-content-center">
+            <div class="col-md-2">
+              <select class="details stateDetail">
+                <option disabled selected>Select State</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <select class="details cityDetail">
+                <option disabled selected>Select City</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <input type="text" placeholder="Address" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="allCardWrapper mt-5">
+          <div class="servicesCardWrapper AcCard ">
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Captain Jack Sparrow is a fictional character .</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="allCardWrapper mt-5">
+          <div class="servicesCardWrapper termiteCard ">
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Sparrow is introduced seeking to regain his ship,</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="allCardWrapper mt-5">
+          <div class="servicesCardWrapper comboCard ">
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>The characterization of Sparrow is based on a combination</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="servicesCard">
+                  <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+                  <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, Lorem, ipsum dolor. dolor.</li>
+                    <li>Lorem, dolor.</li>
+                    <li>Lorem, ipsum consectetur dolor.</li>
+                  </ul>
+                  <div class="btnTxt">Lorem, ipsum dolor.</div>
+                  <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, id.
+                  </p>
+                  <div class="text-center mt-3">
+                    <a href="">Lorem ipsum dolor sit amet.</a>
+                    <br />
+                  </div>
+                  <div class="bookNowBtn text-center my-4">
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" ></script>
+  <script>
+    $(function(){
+
+  
+      var token ;
+      $.ajax({
+      url: "https://www.universal-tutorial.com/api/getaccesstoken",
+      method: "GET",
+      headers:{
+        "Accept": "application/json",
+        "api-token": "xPRtU2zmzocpIM-l_lhEVbhGN_0-f67eNBn-XfEXDm6sQZGT96Qqf13YN53dhKTftJk",
+        "user-email": "dummyToken@gmail.com"
+      },
+      success: function(data){
+        getState(data.auth_token)
+        console.log(data.auth_token)
+        token = data.auth_token;
+      }
+    });
+
+    function getState(token){
+      $.ajax({
+        url: "https://www.universal-tutorial.com/api/states/India",
+        method: "GET",
+        headers:{
+          "Accept": "application/json",
+          "Authorization": "Bearer "+token,
+        },
+        success: function(data){
+          // getCountry(data.auth_token)
+          for(let state of data){
+              $('.stateDetail').append(`<option val=${state.state_name}>${state.state_name}<?option>`)
+            }
+        }
+      })
+    };
+
+
+    function getCity(state){
+      console.log(state);
+      $.ajax({
+        url: `https://www.universal-tutorial.com/api/cities/${state}`,
+        method: "GET",
+        headers:{
+          "Accept": "application/json",
+          "Authorization": "Bearer "+token,
+        },
+        success: function(data){
+          console.log(data)
+          for(let city of data){
+              $('.cityDetail').append(`<option>${city.city_name}<?option>`)
+            }
+        }
+      })
+    };
+    
+    $('.stateDetail').click(function(){
+      let state = $(".stateDetail option:selected").val();
+      getCity(state);
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    //   // 
+    // $.ajax({
+    //   url: "https://countriesnow.space/api/v0.1/countries/states",
+    //   url:' ',
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "text/plain"
+    //   },
+    //   data: {"country": "india"},
+    //   success: function(data){
+    //     let countries = data.data;
+    //     console.log(data)
+    //     for(let country of countries){
+    //       if(country.name=='India'){
+    //         let cities = country.states;
+    //        for(let city of country.states){
+    //         $('.stateDetail').append(`<option>${city.name}<?option>`)
+    //        }
+    //       }
+    //     }
+    //   }
+    // })
+
+
+
+
+
+      $('.ac').click(function(){
+        $('.servicesCardWrapper').hide();
+        $('.AcCard').show();            
+        $('.tabBtns').removeClass('activeTabBrn');
+        $(this).addClass('activeTabBrn');            
+      })
+      $('.termite').click(function(){
+        $('.servicesCardWrapper').hide();    
+        $('.termiteCard').show();       
+        $('.tabBtns').removeClass('activeTabBrn');
+        $(this).addClass('activeTabBrn');           
+      })
+      $('.combo').click(function(){
+        $('.servicesCardWrapper').hide();  
+        $('.comboCard').show();   
+        $('.tabBtns').removeClass('activeTabBrn');
+        $(this).addClass('activeTabBrn');                 
+      })
+    })
+  </script>
+</html>
